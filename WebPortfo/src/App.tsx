@@ -1,12 +1,16 @@
     import React from 'react';
-    import Button from '@mui/material/Button';
-    import Typography from '@mui/material/Typography';
+    import Navbar from './components/NavBar';
+    import BasicGrid from './components/llll';
+   
 
     function App() {
       return (
         <div>
-           <Button variant="contained">Hello world</Button>
+           <Navbar />
+           <header> lmao</header>
+           <BasicGrid></BasicGrid>
         </div>
+        
       );
     }
 
