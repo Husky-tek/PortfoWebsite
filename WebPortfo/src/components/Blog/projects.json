@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "My First Project",
+    "description": "A brief description of what this project is about, the technologies used, and what I learned.",
+    "image": "https://via.placeholder.com/500x300",
+    "github": "https://github.com/Husky-tek/your-repo-1"
+  },
+  {
+    "id": 2,
+    "title": "Another Cool Project",
+    "description": "This project showcases my skills in React and Node.js. It features a full authentication system.",
+    "image": "https://i.imgur.com/0xNx74W.jpeg",
+    "github": "https://github.com/Husky-tek/your-repo-2"
+  },
+  {
+    "id": 3,
+    "title": "Project Without Image",
+    "description": "A backend-focused project that does not have a live demo or a specific UI to show.",
+    "image": "",
+    "github": "https://github.com/Husky-tek/your-repo-3"
+  }
+]
