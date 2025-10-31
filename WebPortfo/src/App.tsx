@@ -3,13 +3,15 @@
     import Navbar from './components/NavBar';
     import Projects from './components/projects';
     import Blog from './Blog'
+    import BlogPost from './components/BlogPost';
     import { Box, Typography } from '@mui/material';
+    import background from './assets/placeholder.png'
     
     const Home = () => (
       <Box
         sx={{
           height: 'calc(100vh - 64px)', // Full viewport height minus the AppBar
-          backgroundImage: 'url(https://source.unsplash.com/random/1920x1080?technology,code)',
+          backgroundImage: `url(${background})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',
@@ -37,6 +39,7 @@
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:postId" element={<BlogPost />} />
           </Routes>
         </div>
       );
