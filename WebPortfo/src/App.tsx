@@ -6,26 +6,33 @@
     import BlogPost from './components/BlogPost';
     import { Box, Card, Typography } from '@mui/material';
     import background from './assets/stars.jpg'
+    import Grid from '@mui/material/Grid';
+    
      
     
     const Home = () => (
       <Box
         sx={{
-          height: 'calc(100vh - 64px)', // Full viewport height minus the AppBar
+          height: 'calc(100vh - 70px)', 
           backgroundImage: `url(${background})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           color: 'white',
           textAlign: 'center',
+          p: { xs: 5, md: 3 }, // Add padding
         }}
       >
-        <Card>
-          lmao
+
+        <Card sx={{backgroundColor: 'rgba(0,0,0,0.5)', p: { xs: 2, md: 4 } }}>
+          <Typography variant='h2' sx={{ mb: 2 }}>Hello,</Typography>
+          <Typography variant='h2' >I'm James Catbagan</Typography>
+          <Typography variant='body1' > </Typography>
         </Card>
+        
         
       </Box>
     );
