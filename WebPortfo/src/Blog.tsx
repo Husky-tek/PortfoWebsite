@@ -11,11 +11,12 @@ export default function Blog() {
   return (
     <Box sx={{ flexGrow: 1, padding: 2 }}>
       <Typography variant="h4" component="h1" gutterBottom sx={{ textAlign: 'center', mb: 4 }}>
-        My Blog
+        Blogposts
       </Typography>
       <Grid container spacing={4} justifyContent="center">
+        
         {posts.map((post: any) => (
-          <Grid item xs={12} md={8} key={post.id}>
+          <Grid size = {11} item xs={0} md={0} key={post.id}>
             <Card>
               <CardActionArea component={RouterLink} to={`/blog/${post.id}`}>
                 <CardContent>
@@ -28,14 +29,13 @@ export default function Blog() {
                   <Typography variant="body1">
                     {post.summary}
                   </Typography>
-                  <Typography color="primary" sx={{ mt: 2, fontWeight: 'bold' }}>
-                    Read More...
-                  </Typography>
+                  
                 </CardContent>
               </CardActionArea>
             </Card>
           </Grid>
         ))}
+        
       </Grid>
     </Box>
   );

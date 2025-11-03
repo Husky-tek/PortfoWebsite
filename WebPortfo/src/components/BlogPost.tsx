@@ -12,7 +12,7 @@ export default function BlogPost() {
   if (!post) {
     return (
       <Box sx={{ p: 3, textAlign: 'center' }}>
-        <Typography variant="h5">Blog post not found!</Typography>
+        <Typography variant="h5">Post not found</Typography>
         <Button component={RouterLink} to="/blog" variant="contained" sx={{ mt: 2 }}>
           GO BACK
         </Button>
@@ -24,7 +24,7 @@ export default function BlogPost() {
 
   return (
     <Box sx={{ p: { xs: 2, md: 4 } }}>
-      <Paper sx={{ p: { xs: 2, md: 4 } }}>
+      <Paper sx={{ p: { xs: 2, md: 4 }, backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
         <Typography variant="h4" component="h1" gutterBottom>
           {post.title}
         </Typography>

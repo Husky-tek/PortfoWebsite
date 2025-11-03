@@ -4,23 +4,17 @@
     import Projects from './components/projects';
     import Blog from './Blog'
     import BlogPost from './components/BlogPost';
-    import { Box, Card, Typography } from '@mui/material';
-    import background from './assets/stars.jpg'
-    import Grid from '@mui/material/Grid';
-    
+    import { Box, Card, Typography, Container } from '@mui/material';
      
     
     const Home = () => (
       <Box
         sx={{
-          height: 'calc(100vh - 70px)', 
-          backgroundImage: `url(${background})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          minHeight: 'calc(100vh - 64px)', // Adjust based on Navbar height
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           color: 'white',
           textAlign: 'center',
           p: { xs: 5, md: 3 }, // Add padding
@@ -41,12 +35,14 @@
       return (
         <div>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:postId" element={<BlogPost />} />
-          </Routes>
+          <Container component="main" sx={{ py: 4 }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:postId" element={<BlogPost />} />
+            </Routes>
+          </Container>
         </div>
       );
     }
