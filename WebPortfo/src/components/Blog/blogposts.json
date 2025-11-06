@@ -4,16 +4,7 @@
     "title": "Placeholder",
     "date": "2023-10-26",
     "summary": "placeholder",
-    "content": "placeholder",
-    "image" : "https://i.imgur.com/MhsChDl.jpeg"
-  },
-
-  {
-    "id": 2,
-    "title": "Placeholder 2",
-    "date": "2023-10-26",
-    "summary": "placeholder 2 ",
-    "content": "placeholder 2",
+    "content": "/posts/post1.txt",
     "image" : "https://i.imgur.com/MhsChDl.jpeg"
   }
  
