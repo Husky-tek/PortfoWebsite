@@ -33,16 +33,22 @@
 
     function App() {
       return (
+        
         <div>
+          
           <Navbar />
           <Container component="main" sx={{ py: 4 }}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:postId" element={<BlogPost />} />
-            </Routes>
+            
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:postId" element={<BlogPost />} />
+              </Routes>
+            
+            
           </Container>
+          
         </div>
       );
     }
