@@ -2,7 +2,7 @@
     import { Routes, Route } from 'react-router-dom';
     import Navbar from './components/NavBar';
     import Projects from './components/projects';
-    import Blog from './Blog'
+    import Blog from './components/Blog/Blog';
     import BlogPost from './components/Blog/BlogPost';
     import { Box, Card, Typography, Container, Link } from '@mui/material';
     import Button from '@mui/material/Button'
