@@ -2,7 +2,7 @@
   "name": "package",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Husky-tek.github.io/PortfoWebsite",
+  "homepage": "https://husky-tek.github.io/PortfoWebsite",
   "type": "module",
   "scripts": {
     "dev": "vite",
