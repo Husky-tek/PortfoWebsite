@@ -4,7 +4,7 @@
     import Projects from './components/projects';
     import Blog from './Blog'
     import BlogPost from './components/BlogPost';
-    import { Box, Card, Typography, Container } from '@mui/material';
+    import { Box, Card, Typography, Container, Link } from '@mui/material';
     import Button from '@mui/material/Button'
     import Resume from './assets/JamesCatbaganResume2025.pdf'
      
@@ -29,6 +29,16 @@
           <a href={Resume} target='_blank' style={{ textDecoration: 'none' }}>
             <Button variant="contained" sx={{ mt: 2 }}>Resume Download</Button>
           </a>
+          <Typography variant="caption" display="block" sx={{ mt: 2 }}>
+            Background photo by{' '}
+            <Link 
+              href="https://unsplash.com/photos/blue-sky-with-stars-during-night-time-GX542ehZwSk" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              color="inherit">
+              Arthur Volkers
+            </Link>
+          </Typography>
         </Card>
         
         
