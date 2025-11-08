@@ -3,7 +3,7 @@
     import Navbar from './components/NavBar';
     import Projects from './components/projects';
     import Blog from './Blog'
-    import BlogPost from './components/BlogPost';
+    import BlogPost from './components/Blog/BlogPost';
     import { Box, Card, Typography, Container, Link } from '@mui/material';
     import Button from '@mui/material/Button'
     import Resume from './assets/JamesCatbaganResume2025.pdf'
@@ -57,7 +57,7 @@
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:postId" element={<BlogPost />} />
+                <Route path="/blog/:id" element={<BlogPost />} />
               </Routes>
             
             
