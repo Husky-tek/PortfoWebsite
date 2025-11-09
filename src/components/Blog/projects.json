@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Password Generator",
+    "description": "Terminal applications where users generate passwords",
+    "image": "https://via.placeholder.com/500x300",
+    "github": "https://github.com/Husky-tek/BasicPasswordGenerator"
+  },
+
+  {
+    "id": 2,
+    "title": "Profanity Detector Discord Bot",
+    "description": "Discord bot that flags messages if a user says an innapropreate word",
+    "image": "https://via.placeholder.com/500x300",
+    "github": "https://github.com/Husky-tek/ProfanityDetector"
+  }
+  
+]
