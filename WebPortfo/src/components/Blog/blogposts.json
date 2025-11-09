@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "title": "Development of Cheese Crusade #1",
+    "date": "2025-11-6",
+    "summary": "The start of development and what inspired me to make this game",
+    "content": "/posts/post1.txt",
+    "image" : ""
+  }, 
+  {
+    "id": 3,
+    "title": "Planned side projects",
+    "date": "2025-11-10",
+    "summary": "Small games that i have planned",
+    "content": "/posts/post1.txt",
+    "image" : ""
+  }
+ 
+]
