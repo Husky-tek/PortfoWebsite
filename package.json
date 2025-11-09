@@ -1,5 +1,5 @@
 {
-  "name": "PortfoWebsite",
+  "name": "portfo-website",
   "private": true,
   "version": "0.1.0",
   "homepage": "https://husky-tek.github.io/PortfoWebsite",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.27.1",
