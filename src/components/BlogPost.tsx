@@ -1,16 +1,21 @@
-import { useState, useEffect } from 'react';
-import { useParams, Link as RouterLink } from 'react-router-dom';
-import { Box, Typography, Paper, Button, CircularProgress } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Box, Typography, Paper, CircularProgress } from '@mui/material';
 import posts from './Blog/blogposts.json';
+
+interface Post {
+  id: number;
+  title: string;
+  date: string;
+  content: string;
+}
 
 export default function BlogPost() {
   // Get the postId from the URL
   const { postId } = useParams<{ postId: string }>();
-  const postInfo = posts.find(p => p.id.toString() === postId);
-
-  const [postContent, setPostContent] = useState('');
+  const postInfo = (posts as Post[]).find(p => p.id.toString() === postId);
+  const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (postInfo) {
@@ -22,48 +27,38 @@ export default function BlogPost() {
           return response.text();
         })
         .then(text => {
-          setPostContent(text);
+          setContent(text);
           setLoading(false);
         })
-        .catch(err => {
-          console.error("Failed to fetch post content:", err);
-          setError('Failed to load post content.');
+        .catch(error => {
+          console.error("Error fetching post content:", error);
+          setContent("Failed to load post content.");
           setLoading(false);
         });
+    } else {
+      setContent("Post not found.");
+      setLoading(false);
     }
   }, [postInfo]);
 
-  if (!postInfo) {
-    return (
-      <Box sx={{ p: 3, textAlign: 'center' }}>
-        <Typography variant="h5">Post not found, if you're trying to find something using a direct link i probably deleted it by now</Typography>
-        <Button component={RouterLink} to="/blog" variant="contained" sx={{ mt: 2 }}>
-          GO BACK
-        </Button>
-      </Box>
-    );
-  }
-
   if (loading) {
-    return <CircularProgress />;
+    return <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}><CircularProgress /></Box>;
   }
 
-  if (error) {
-    return <Typography color="error">error</Typography>;
+  if (!postInfo || content === "Post not found.") {
+    return <Typography>Post not found.</Typography>;
   }
 
   return (
     <Box sx={{ p: { xs: 2, md: 4 } }}>
       <Paper sx={{ p: { xs: 2, md: 4 }, backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          {postInfo.title}
+          {postInfo?.title}
         </Typography>
         <Typography color="text.secondary" sx={{ mb: 3 }}>
-          {postInfo.date}
+          {postInfo?.date}
         </Typography>
-        <Typography variant="body1" sx={{ whiteSpace: 'pre-wrap' }}>
-          {postContent}
-        </Typography>
+        <Typography variant="body1" sx={{ whiteSpace: 'pre-wrap' }}>{content}</Typography>
       </Paper>
     </Box>
   );

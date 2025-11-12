@@ -4,8 +4,15 @@
     "title": "Development of Cheese Crusade #1",
     "date": "2025-11-6",
     "summary": "The start of development and what inspired me to make this game",
-    "content": "/posts/post1.txt",
-    "image" : "https://i.imgur.com/MhsChDl.jpeg"
+    "content": "/posts/post1.txt"
+  },
+
+  {
+    "id": 2,
+    "title": "Development of Cheese Crusade #2",
+    "date": "2025-11-13",
+    "summary": "Continuing development and adding new features",
+    "content": "/posts/post2.txt"
   }
  
 ]
