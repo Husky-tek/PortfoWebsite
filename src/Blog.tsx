@@ -19,8 +19,8 @@ const posts: Post[] = postsData;
 export default function Blog() {
   return (
     <Box sx={{ flexGrow: 1, padding: 2 }}>
-      <Typography variant="h4" component="h1" gutterBottom sx={{ textAlign: 'center', mb: 4 }} color='red'>
-        Blogposts are currently not working rn
+      <Typography variant="h4" component="h1" gutterBottom sx={{ textAlign: 'center', mb: 4 }}>
+        Blogposts
       </Typography>
       <Grid container spacing={4} justifyContent="center">
         
