@@ -1,8 +1,8 @@
 {
-  "name": "husky-tek.github.io",
+  "name": "PortfoWebsite",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://husky-tek.github.io",
+  "homepage": "https://husky-tek.github.io/PortfoWebsite/",
   "type": "module",
   "scripts": {
     "dev": "vite",

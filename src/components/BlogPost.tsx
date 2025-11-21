@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Typography, Paper, CircularProgress } from '@mui/material';
 import postsData from './Blog/blogposts.json';
 
@@ -22,6 +22,11 @@ export default function BlogPost() {
     setError(null);
 
     const post = (postsData as Post[]).find(p => String(p.id) === postId);
+    const navigate = useNavigate();
+
+    const handleGoBack = () => {
+      navigate(-1);
+    }
 
     if (post) {
       setPostInfo(post);
@@ -45,6 +50,7 @@ export default function BlogPost() {
 
   return (
     <Paper elevation={3} sx={{ p: { xs: 2, md: 4 } }}>
+      
       <Typography variant="h3" component="h1" gutterBottom>{postInfo.title}</Typography>
       <Typography variant="subtitle1" color="text.secondary" gutterBottom>{postInfo.date}</Typography>
       <Box sx={{ mt: 3 }} dangerouslySetInnerHTML={{ __html: postInfo.content }} />
