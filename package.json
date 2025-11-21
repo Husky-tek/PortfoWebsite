@@ -2,7 +2,7 @@
   "name": "portfowebsite",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://husky-tek.github.io/PortfoWebsite/",
+  "homepage": "http://jcatbag.net",
   "type": "module",
   "scripts": {
     "dev": "vite",

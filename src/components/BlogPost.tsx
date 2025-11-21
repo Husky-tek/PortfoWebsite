@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Box, Typography, Paper, CircularProgress } from '@mui/material';
 import postsData from './Blog/blogposts.json';
 
@@ -22,11 +22,8 @@ export default function BlogPost() {
     setError(null);
 
     const post = (postsData as Post[]).find(p => String(p.id) === postId);
-    const navigate = useNavigate();
+    
 
-    const handleGoBack = () => {
-      navigate(-1);
-    }
 
     if (post) {
       setPostInfo(post);
